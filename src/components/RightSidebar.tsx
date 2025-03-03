@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaPlus } from "react-icons/fa";
 import { BsReverseLayoutSidebarReverse } from "react-icons/bs";
 import TradingImg from "../assets/trading.png"
