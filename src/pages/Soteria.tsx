@@ -1,6 +1,6 @@
 const Soteria = () => {
   return (
-    <div>Soteria</div>
+    <div className="text-black">Soteria</div>
   )
 }
 

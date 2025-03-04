@@ -1,37 +1,36 @@
 import "./App.css";
-import Button from "./components/Button";
-import Dashboard from "./components/Dashboard";
-import Sidebar from "./components/Sidebar";
-import RightSidebar from "./components/RightSidebar";
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import AppLayout from "./components/Layout/AppLayout";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Soteria, LiveTrading, PortfolioManagement, ResearchHub, ErrorPage } from "./pages";
 
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element: <AppLayout/>,
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        path:'/',
+        element: <Soteria/>
+      },
+      {
+        path:'/portfolio',
+        element: <PortfolioManagement/>
+      },
+      {
+        path:'/research',
+        element: <ResearchHub/>
+      },
+      {
+        path:'/liveTrading',
+        element: <LiveTrading/>
+      }
+    ]
+  },
+])
 
-const App: React.FC = () => {
-  const [expanded, setExpanded] = useState<boolean>(false);
-  const [rightexpanded, setRightexpanded] = useState<boolean>(false);
-
-  return (
-    <div className="flex justify-between">
-      <AnimatePresence> 
-        {expanded ? (
-          <Sidebar setExpanded={setExpanded} expanded={expanded} />
-        ) : (
-          <Button setFun={setExpanded} flag={1} />
-        )}
-      </AnimatePresence>
-
-      <Dashboard />
-
-      <AnimatePresence> 
-        {rightexpanded ? (
-          <RightSidebar setRightexpanded={setRightexpanded} rightexpanded={rightexpanded} />
-        ) : (
-          <Button setFun={setRightexpanded} flag={0} />
-        )}
-      </AnimatePresence>
-    </div>
-  );
+const App = () => {
+  return <RouterProvider router={router}></RouterProvider>
 };
 
 export default App;

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaPlus } from "react-icons/fa";
 import { BsReverseLayoutSidebarReverse } from "react-icons/bs";
-import TradingImg from "../assets/trading.png";
+import TradingImg from "../../assets/trading.png";
 
 type RightSidebarProps = {
   setRightexpanded: React.Dispatch<React.SetStateAction<boolean>>;
