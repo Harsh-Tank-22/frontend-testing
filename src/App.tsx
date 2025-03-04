@@ -4,25 +4,32 @@ import Dashboard from "./components/Dashboard";
 import Sidebar from "./components/Sidebar";
 import RightSidebar from "./components/RightSidebar";
 import { useState } from "react";
-type AppProps = {};
-const App: React.FC<AppProps> = () => {
+import { AnimatePresence } from "framer-motion";
+
+
+const App: React.FC = () => {
   const [expanded, setExpanded] = useState<boolean>(false);
   const [rightexpanded, setRightexpanded] = useState<boolean>(false);
 
   return (
     <div className="flex justify-between">
-      {expanded ? (
-        <Sidebar setExpanded={setExpanded} />
-      ) : (
-        <Button setFun={setExpanded} flag={1} />
-      )}
+      <AnimatePresence> 
+        {expanded ? (
+          <Sidebar setExpanded={setExpanded} expanded={expanded} />
+        ) : (
+          <Button setFun={setExpanded} flag={1} />
+        )}
+      </AnimatePresence>
+
       <Dashboard />
 
-      {rightexpanded ? (
-        <RightSidebar setRightexpanded={setRightexpanded} />
-      ) : (
-        <Button setFun={setRightexpanded} flag={0} />
-      )}
+      <AnimatePresence> 
+        {rightexpanded ? (
+          <RightSidebar setRightexpanded={setRightexpanded} rightexpanded={rightexpanded} />
+        ) : (
+          <Button setFun={setRightexpanded} flag={0} />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

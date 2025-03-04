@@ -1,7 +1,12 @@
-const Dashboard = () => {
-  return (
-    <div >Dashboard</div>
-  )
-}
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-export default Dashboard
+const Dashboard: React.FC = () => {
+  return (
+    <div>
+      <Outlet />
+    </div>
+  );
+};
+
+export default Dashboard;
