@@ -1,8 +1,8 @@
 import "./App.css";
-import AppLayout from "./components/Layout/AppLayout";
+// import AppLayout from "./components/Layout/AppLayout";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Soteria, LiveTrading, PortfolioManagement, ResearchHub, ErrorPage } from "./pages";
-import SignUpPage from "./pages/SignUpPage";
+// import SignUpPage from "./pages/SignUpPage";
 import SignInPage from "./pages/SignInPage";
 
 const router = createBrowserRouter([
