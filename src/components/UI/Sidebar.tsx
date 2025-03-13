@@ -52,16 +52,16 @@ const Sidebar: React.FC<SidebarProps> = ({ setExpanded, expanded }) => {
       <div className="my-3 h-[60%] font-bold">
         <ul>
         <li className='hover:text-purple-700 hover:bg-purple-200 my-1'>
-            <NavLink to="/" className="px-7">Soteria</NavLink>
+            <NavLink to="/dashboard/soteria" className="px-7">Soteria</NavLink>
           </li>
           <li className='hover:text-purple-700 hover:bg-purple-200 my-1'>
-            <NavLink to="/portfolio" className="px-7">Portfolio</NavLink>
+            <NavLink to="/dashboard/portfolio" className="px-7">Portfolio</NavLink>
           </li>
           <li className='hover:text-purple-700 hover:bg-purple-200 my-1'>
-            <NavLink to="/research" className="px-7">R&D Hub</NavLink>
+            <NavLink to="/dashboard/research" className="px-7">R&D Hub</NavLink>
           </li>
           <li className='hover:text-purple-700 hover:bg-purple-200 my-1'>
-            <NavLink to="/liveTrading" className="px-7">Live Market</NavLink>
+            <NavLink to="/dashboard/liveTrading" className="px-7">Live Market</NavLink>
           </li>
         </ul>
       </div>
