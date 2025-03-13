@@ -1,6 +1,4 @@
 import logo from '/logo.svg'
-import leftArt from '/leftArt.svg'
-import rightArt from '/rightArt.svg'
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';

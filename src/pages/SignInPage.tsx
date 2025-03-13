@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from '/logo.svg';
 import leftArt from '/leftArt.svg';
 import rightArt from '/rightArt.svg';
